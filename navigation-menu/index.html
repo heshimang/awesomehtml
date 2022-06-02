@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--=============== BOXICONS ===============-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+  <link rel="stylesheet" href="./css/index.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="navigation">
+    <ul>
+      <li class="active">
+        <a href="#">
+          <i class='bx bx-home'></i>
+          <span>Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-user'></i>
+          <span>User</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-message-square-dots'></i>
+          <span>Message</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-camera'></i>
+          <span>Photos</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-cog'></i>
+          <span>Settings</span>
+        </a>
+      </li>
+      <div class="indicator"></div>
+    </ul>
+  </div>
+  
+  <script>
+    window.onload = function () {
+      const navs = document.querySelectorAll('.navigation li');
+      console.log(navs);
+
+      function activeLink() {
+        navs.forEach(nav => {
+          nav.classList.remove('active');
+          this.classList.add('active');
+        })
+      }
+      navs.forEach(nav => {
+        nav.addEventListener('click', activeLink)
+      })
+    }
+  </script>
+</body>
+
+</html>
